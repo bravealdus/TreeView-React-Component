@@ -4,6 +4,8 @@ import './TreeView.css'
 
 export default class TreeView extends Component {
 
+  static propTypes = { data: React.PropTypes.object.isRequired }
+
   state = {
     children: [],
     isOpen: true
@@ -22,8 +24,10 @@ export default class TreeView extends Component {
   }
 
   handleToggle() {
-    this.setState({children: this.state.isOpen ? [] : this.props.data.items})
-    this.setState({isOpen: !this.state.isOpen})
+    if(this.props.data.items !== undefined){
+      this.setState({children: this.state.isOpen ? [] : this.props.data.items})
+      this.setState({isOpen: !this.state.isOpen})
+    }
   }
 
   render() {
@@ -42,8 +46,8 @@ export default class TreeView extends Component {
 
     return(
       <div className="tree-node" style={style.node} >
-        <div className="label" onClick={this.handleToggle} >
-          {this.props.data.label}
+        <div onClick={this.handleToggle}>
+          <div className="label">{this.props.data.label}</div>
         </div>
         <ReactCSSTransitionGroup
           transitionName="opacity-animation"

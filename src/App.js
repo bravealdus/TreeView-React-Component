@@ -3,34 +3,24 @@ import TreeView  from './component/tree-view'
 
 export default class App extends Component {
   state = {
-    tree: {
-          label: 'Node Label',
+    exampleTree: {
+      label: 'Node Label',
+      items: [{
+          label: 'Child Node Label',
           items: [
-              {
-                label: 'Child Node Label',
-                items: [
-                    {
-                        label: 'Child Node Label',
-                        items: [
-                            {
-                                label: 'Child Node Label',
-                                items: []
-                            },
-                            {
-                                label: 'Child Node Label',
-                            },
-                            {
-                                label: 'Leaf Node Label'
-                            }
-                        ]
-                    }
+            {
+              label: 'Child Node Label',
+              items: [
+                  {label: 'Child Node Label', items: [] },
+                  {label: 'Child Node Label'},
+                  {label: 'Leaf Node Label'}
                 ]
-              },
-              {
-                label: 'Leaf Node Label'
-              }
+            }
           ]
-      }
+        },
+        { label: 'Leaf Node Label' }
+      ]
+    }
   }
 
   render() {
@@ -42,7 +32,7 @@ export default class App extends Component {
     }
     return (
       <div style={style.tree}>
-        <TreeView data={this.state.tree} />
+        <TreeView data={this.state.exampleTree} />
       </div>
     )
   }
