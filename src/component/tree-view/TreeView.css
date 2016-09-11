@@ -1,0 +1,27 @@
+.tree-node > .label {
+  padding: 10px 0;
+}
+
+.tree-node > .label:hover {
+  cursor: pointer;
+  color: black;
+  font-size: 1.2em;
+}
+
+.opacity-animation-enter {
+  opacity: 0.01;
+}
+
+.opacity-animation-enter.opacity-animation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.opacity-animation-leave {
+  opacity: 1;
+}
+
+.opacity-animation-leave.opacity-animation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
