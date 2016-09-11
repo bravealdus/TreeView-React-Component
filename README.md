@@ -1,10 +1,13 @@
 ## TreeView React Component
 
 Import the component wherever you need it
-`import TreeView  from './component/tree-view'`
-<br>
+```javascript
+import TreeView  from './component/tree-view'
+```
 Pass the tree data to the component
-`<TreeView data={tree} />`
+```html
+<TreeView data={tree} />
+```
 
 ## Available Scripts
 
