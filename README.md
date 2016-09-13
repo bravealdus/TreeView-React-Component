@@ -23,7 +23,7 @@ Any lint errors in the console will be in the console.
 
 ### `npm test`
 Launches the test runner in the interactive watch mode.  
-Open [https://github.com/facebookincubator/create-react-app/blob/master/template/README.md#running-tests](the test docs) for more info
+Open [the FB test docs](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md#running-tests) for more info
 
 ### `npm run build`
 
